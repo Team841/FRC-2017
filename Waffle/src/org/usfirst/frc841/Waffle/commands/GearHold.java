@@ -12,6 +12,7 @@
 package org.usfirst.frc841.Waffle.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc841.Waffle.Robot;
+import org.usfirst.frc841.Waffle.subsystems.GearManipulator;
 
 /**
  *
@@ -41,6 +42,8 @@ public class GearHold extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	Robot.gearManipulator.rampIn();
+    	Robot.gearManipulator.releaseHold();
     }
 
     // Make this return true when this Command no longer needs to run execute()
