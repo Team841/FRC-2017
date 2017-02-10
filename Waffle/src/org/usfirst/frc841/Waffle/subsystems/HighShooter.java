@@ -13,6 +13,8 @@ package org.usfirst.frc841.Waffle.subsystems;
 
 import org.usfirst.frc841.Waffle.RobotMap;
 import org.usfirst.frc841.Waffle.commands.*;
+
+import edu.wpi.first.wpilibj.GearTooth;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Talon;
 
