@@ -193,6 +193,18 @@ Children:
       Name: Ramp
     - Children: []
       Properties:
+        Input Channel (Digital): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11',
+            '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23',
+            '24', '25']
+          default: '0'
+          name: Input Channel (Digital)
+          validators: [DigitalChannel]
+          value: '9'
+      Base: Digital Input
+      Name: PegSensor
+    - Children: []
+      Properties:
         Forward PCM (Solenoid): !!robotbuilder.data.properties.ChoicesProperty
           choices: *id008
           default: '0'
@@ -226,7 +238,7 @@ Children:
         validators: null
         value: []
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Default Command, type: Command, validators: null, value: None}
+        name: Default Command, type: Command, validators: null, value: CheckPegAndRelease}
       Constants: !!robotbuilder.data.properties.ConstantsProperty
         default: []
         name: Constants
@@ -675,6 +687,105 @@ Children:
         name: Button on SmartDashboard, validators: null, value: true}
     Base: Command
     Name: LowGear
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value: []
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: &id021 []
+        name: Parameter presets
+        validators: null
+        value: *id021
+      Commands: !!robotbuilder.data.properties.ListProperty
+        default: &id022 []
+        name: Commands
+        validators: [List]
+        value: *id022
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+    Base: Command Group
+    Name: AutonomousGearStraight
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: Time, type: double}
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: Power, type: double}
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: Forward, type: boolean}
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: &id023 []
+        name: Parameter presets
+        validators: null
+        value: *id023
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
+    Base: Command
+    Name: TimedDriveStraight
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value:
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: Left, type: boolean}
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: Power, type: double}
+        - !!robotbuilder.data.properties.ParameterDescriptor {name: Time, type: double}
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: &id024 []
+        name: Parameter presets
+        validators: null
+        value: *id024
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
+    Base: Command
+    Name: TimedTurn
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value: []
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: DriveTrain}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: &id025 []
+        name: Parameter presets
+        validators: null
+        value: *id025
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+    Base: Command
+    Name: DriveTowardsPeg
+  - Children: []
+    Properties:
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value: []
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: GearManipulator}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: &id026 []
+        name: Parameter presets
+        validators: null
+        value: *id026
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+    Base: Command
+    Name: CheckPegAndRelease
   Properties: {}
   Base: Commands
   Name: Commands
@@ -701,6 +812,6 @@ Properties:
   Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\Team841-P01\',
     extension: null, folder: true, name: Wiring file location, validators: null, value: 'C:\Users\Team841-P01\Documents\GitHub\FRC-2017'}
   Autonomous Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-    name: Autonomous Command, type: Command, validators: null, value: Autonomous Command}
+    name: Autonomous Command, type: Command, validators: null, value: AutonomousGearStraight}
 Base: Robot
 Name: Waffle
