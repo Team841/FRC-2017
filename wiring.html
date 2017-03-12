@@ -22,7 +22,13 @@
   </head>
   <body>
     <h1>Wiring</h1>
-                            <h2>PWMs</h2>
+                    <h2>DIO</h2>
+	    <table><tr>
+	        <th class="pound">#</th>
+	        <th>Sensor</th></tr>
+	                                               <tr><td>0</td><td>HighShooter WheelSpeedSensor</td><td></td></tr>
+            	                                                                                                                                                                                                                                                                                                                 	    </table>
+                    <h2>PWMs</h2>
 	    <table><tr>
 	        <th class="pound">#</th>
 	        <th>Motor</th>
@@ -31,11 +37,31 @@
             	                                         <tr><td>1</td><td>DriveTrain LeftDriveTrain2</td><td>VictorSP</td></tr>
             	                                         <tr><td>2</td><td>DriveTrain RightDriveTrain1</td><td>VictorSP</td></tr>
             	                                         <tr><td>3</td><td>DriveTrain RightDriveTrain2</td><td>VictorSP</td></tr>
-            	                                                                                                                                                                                                                                                                             	    </table>
+            	                                         <tr><td>4</td><td>DriveTrain RightLight</td><td>VictorSP</td></tr>
+            	                                                                 <tr><td>7</td><td>DriveTrain LeftLight</td><td>VictorSP</td></tr>
+            	                                                                 <tr><td>10</td><td>HighShooter HighShooter</td><td>VictorSP</td></tr>
+            	                                                                                                                                                                                         	    </table>
      
         
             
             
-                                                                                                                                                                                                                                                            
-          </body>
+                    <h2>PCM 0</h2>
+	    <table><tr>
+	        <th class="pound">#</th>
+	        <th>Solenoid</th></tr>
+	                                               <tr><td>0</td><td>DriveTrain ShifterSolenoid Forward </td><td></td></tr>
+            	                                         <tr><td>1</td><td>DriveTrain ShifterSolenoid Reverse </td><td></td></tr>
+            	                                         <tr><td>2</td><td>GearManipulator Release  Forward </td><td></td></tr>
+            	                                         <tr><td>3</td><td>GearManipulator Ramp Output </td><td></td></tr>
+            	                                                     <tr><td>5</td><td>DriveTrain ClimberSolenoid Output </td><td></td></tr>
+            	                                                     <tr><td>7</td><td>GearManipulator Release  Reverse </td><td></td></tr>
+            	                                                                                                                                                                                                                             	    </table>
+                                                                                                                                                                                                                                                    
+                <h2>Compressor</h2>
+	<table><tr>
+	<th class="pound">PCM</th>
+	<th>Device</th></tr>
+	                                         <tr><td>0</td><td>DriveTrain Compressor1</td><td></td></tr>
+            	                                                                                                                                                                                                                                                                                                                 	</table>
+      </body>
 </html>

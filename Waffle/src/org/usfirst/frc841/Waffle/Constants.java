@@ -21,6 +21,8 @@ public class Constants {
 	public static final double throttleDeadband = 0.02; 
 	public static final double wheelDeadband = 0.02;	
 	public static final double sensitivityHigh = 0.85;	
-	public static final double sensitivityLow = 0.75;	
+	public static final double sensitivityLow = 0.75;
+	public static final double centervalue = 80;
+	public static final double tolerance = 10;
 	
 }
