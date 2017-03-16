@@ -24,5 +24,6 @@ public class Constants {
 	public static final double sensitivityLow = 0.75;
 	public static final double centervalue = 80;
 	public static final double tolerance = 10;
+	//public static int nAutonomousMode = 0;
 	
 }

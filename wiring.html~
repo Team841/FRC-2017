@@ -27,7 +27,8 @@
 	        <th class="pound">#</th>
 	        <th>Sensor</th></tr>
 	                                               <tr><td>0</td><td>HighShooter WheelSpeedSensor</td><td></td></tr>
-            	                                                                                                                                                                                                                                                                                                                 	    </table>
+            	                                                                                                                                         <tr><td>9</td><td>GearManipulator PegSensor</td><td></td></tr>
+            	                                                                                                                                                                                                     	    </table>
                     <h2>PWMs</h2>
 	    <table><tr>
 	        <th class="pound">#</th>
@@ -37,8 +38,10 @@
             	                                         <tr><td>1</td><td>DriveTrain LeftDriveTrain2</td><td>VictorSP</td></tr>
             	                                         <tr><td>2</td><td>DriveTrain RightDriveTrain1</td><td>VictorSP</td></tr>
             	                                         <tr><td>3</td><td>DriveTrain RightDriveTrain2</td><td>VictorSP</td></tr>
-            	                                         <tr><td>4</td><td>HighShooter HighShooter</td><td>Talon</td></tr>
-            	                                                                                                                                                                                                                                                                 	    </table>
+            	                                         <tr><td>4</td><td>DriveTrain RightLight</td><td>VictorSP</td></tr>
+            	                                                                 <tr><td>7</td><td>DriveTrain LeftLight</td><td>VictorSP</td></tr>
+            	                                                                 <tr><td>10</td><td>HighShooter HighShooter</td><td>VictorSP</td></tr>
+            	                                                                                                                                                                                         	    </table>
      
         
             

@@ -289,7 +289,6 @@ public class DriveTrain extends Subsystem {
 	 */
 	public void SetHighGear() {
 		shifterSolenoid.set(DoubleSolenoid.Value.kForward);
-		climberSolenoid.set(false);
 		isHighGear = true;
 	}
 	
@@ -298,7 +297,6 @@ public class DriveTrain extends Subsystem {
 	 */
 	public void SetLowGear() {
 		shifterSolenoid.set(DoubleSolenoid.Value.kReverse);
-		climberSolenoid.set(false);
 		isHighGear = false;
 	}
 	
@@ -404,6 +402,12 @@ public class DriveTrain extends Subsystem {
 			//SmartDashboard.putString("DB/String 0", "elevator " + subsystem.isElevatorPresent());
 			SmartDashboard.putString("DB/String 1", "elevator " + subsystem.getPegPosition());
 		}
+	}
+	public void setClimber(){
+		climberSolenoid.set(true);
+	}
+	public void releaseClimber(){
+		climberSolenoid.set(false);
 	}
 	
 	public DriveTrain.CLoop cloop;
