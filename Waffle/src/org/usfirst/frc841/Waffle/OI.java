@@ -88,6 +88,7 @@ public class OI {
 
 
         // SmartDashboard Buttons
+        SmartDashboard.putData("AutonomousGearLeft", new AutonomousGearLeft());
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
         SmartDashboard.putData("Drive", new Drive());
         SmartDashboard.putData("QuickTurn", new QuickTurn());
@@ -100,7 +101,6 @@ public class OI {
         SmartDashboard.putData("AutonomousGearStraight", new AutonomousGearStraight());
         SmartDashboard.putData("DriveTowardsPeg", new DriveTowardsPeg());
         SmartDashboard.putData("CheckPegAndRelease", new CheckPegAndRelease());
-        SmartDashboard.putData("AutonomousGearLeft", new AutonomousGearLeft());
         SmartDashboard.putData("AutonomousGearRight", new AutonomousGearRight());
         SmartDashboard.putData("AutonomousGoHome", new AutonomousGoHome());
 
