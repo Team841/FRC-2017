@@ -45,8 +45,8 @@ public class DriveTowardsPeg extends Command {
     protected void execute() {
     	double centerPoint = Robot.driveTrain.getPegPosition();
     	if (Robot.driveTrain.isElevatorPresent()){
-    		if (centerPoint < (Constants.centervalue + Constants.tolerance) &
-    				centerPoint > (Constants.centervalue - Constants.tolerance)	){
+    		//GO STRAIGHT
+    		if (centerPoint < (Constants.centervalue + Constants.tolerance) & centerPoint > (Constants.centervalue - Constants.tolerance)){
     			Robot.driveTrain.SetLeftRight(0.3, -0.3);	
     		}
     		//TURN RIGHT
@@ -59,6 +59,7 @@ public class DriveTowardsPeg extends Command {
     		}
     	}
     	else {
+    		//STOP THE ROBOT
     		Robot.driveTrain.SetLeftRight(0, 0);
     	}
     }
