@@ -22,10 +22,10 @@ public class Constants {
 	public static final double wheelDeadband = 0.02;	
 	public static final double sensitivityHigh = 0.85;	
 	public static final double sensitivityLow = 0.75;
-	public static final double centervalue = 80;
+	public static final double centervalue = 140;
 	public static final double tolerance = 10;
 	//public static final double autoOffSet = 5; 
-	public static final double autoDrivingDistance = 4.2; // In time, is seconds driving from the starting point (SQRT of 2 two times and multiplied by the side of the driving straight)
+	public static final double autoDrivingDistance = 1; // In time, is seconds driving from the starting point (SQRT of 2 two times and multiplied by the side of the driving straight)
 	public static final double autoTurningDistance = .8; // In time, is seconds turning to point to the peg of the sides	
 	//public static int nAutonomousMode = 0;
 	

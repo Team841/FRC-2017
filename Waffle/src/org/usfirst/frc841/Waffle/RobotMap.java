@@ -41,6 +41,9 @@ public class RobotMap {
     public static SpeedController driveTrainLeftLight;
     public static SpeedController driveTrainRightLight;
     public static Compressor driveTrainCompressor1;
+    public static DigitalInput driveTrainAutonomousSwitch1;
+    public static Solenoid driveTrainClimberRatchet;
+    public static DigitalInput driveTrainAutonomousSwitch2;
     public static Solenoid gearManipulatorRamp;
     public static DigitalInput gearManipulatorPegSensor;
     public static DoubleSolenoid gearManipulatorRelease;
@@ -77,6 +80,15 @@ public class RobotMap {
         
         driveTrainCompressor1 = new Compressor(0);
         
+        
+        driveTrainAutonomousSwitch1 = new DigitalInput(1);
+        LiveWindow.addSensor("DriveTrain", "AutonomousSwitch1", driveTrainAutonomousSwitch1);
+        
+        driveTrainClimberRatchet = new Solenoid(0, 4);
+        LiveWindow.addActuator("DriveTrain", "ClimberRatchet", driveTrainClimberRatchet);
+        
+        driveTrainAutonomousSwitch2 = new DigitalInput(2);
+        LiveWindow.addSensor("DriveTrain", "AutonomousSwitch2", driveTrainAutonomousSwitch2);
         
         gearManipulatorRamp = new Solenoid(0, 3);
         LiveWindow.addActuator("GearManipulator", "Ramp", gearManipulatorRamp);
