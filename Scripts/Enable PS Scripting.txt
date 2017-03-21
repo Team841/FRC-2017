@@ -1,0 +1,3 @@
+Running C:\Windows\SysWOW64\WindowsPowerShell\v1.0\ powershell.exe as Administrator, 
+then 
+Set-ExecutionPolicy RemoteSigned

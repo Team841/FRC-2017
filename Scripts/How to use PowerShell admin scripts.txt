@@ -1,0 +1,2 @@
+Open the PowerShell with right clic and as an administrator.
+Search and execute the desired script.
