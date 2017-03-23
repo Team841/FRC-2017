@@ -30,7 +30,7 @@ public class AutonomousGearStraight extends CommandGroup {
     		addSequential (new HighGear());
     		
     		//Go straight for 1.5s, Power 0.3
-    		addSequential (new TimedDriveStraight(1.5, 0.3, true));
+    		addSequential (new TimedDriveStraight(1.5, 0.5, true)); //1.5
 	    	
     		//Center and go straight to the Pig
     		addSequential (new DriveTowardsPeg());

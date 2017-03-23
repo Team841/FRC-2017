@@ -32,7 +32,7 @@ public class AutonomousGearLeft extends CommandGroup {
 		addSequential (new TimedDriveStraight(0.5, 0.3, true));
 		
     	//Turn to the left
-    	addSequential (new TimedTurn(true,0.5,Constants.autoTurningDistance/2));
+    	addSequential (new TimedTurn(true,0.5,Constants.autoTurningDistance));
     	//skiped, must be placed in 45 degrees to the left.
 
 		//Go straight
