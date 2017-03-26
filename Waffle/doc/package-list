@@ -1,5 +1,5 @@
-org.usfirst.frc841.Reptar
-org.usfirst.frc841.Reptar.commands
-org.usfirst.frc841.Reptar.subsystems
+org.usfirst.frc841.Waffle
+org.usfirst.frc841.Waffle.commands
+org.usfirst.frc841.Waffle.subsystems
 org.usfirst.frc841.lib.PID
 org.usfirst.frc841.lib.PathPlanner
