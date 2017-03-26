@@ -117,19 +117,19 @@ public class GearManipulator extends Subsystem {
 	 * @return the state of the up limit for the elbow to move
 	 */
 	public boolean getUpperLimit(){
-		return upperLimit.get();
+		return !upperLimit.get();
 	}
 	/**
 	 * @return the state of the lower limit for the elbow to move
 	 */
 	public boolean getLowerLimit(){
-		return lowerLimit.get();
+		return !lowerLimit.get();
 	}
 	/**
 	 * @return intake gear state for gear handler
 	 */
 	public boolean isGearPresent(){
-		return gearSensor.get();  //sensor must be true when gear is present to make this work.
+		return !gearSensor.get();  //sensor must be false when gear is present to make this work.
 	}
 
 	/**
