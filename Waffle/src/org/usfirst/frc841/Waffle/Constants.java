@@ -24,9 +24,13 @@ public class Constants {
 	public static final double sensitivityLow = 0.75;
 	public static final double centervalue = 140;
 	public static final double tolerance = 10;
+	public static final int currentlimit = 40;
+	
 	//public static final double autoOffSet = 5; 
 	public static final double autoDrivingDistance = .5; // In time, is seconds driving from the starting point to one of the nodes of movement in the autonomous mode.
 	public static final double autoTurningDistance = .4; // In time, is seconds to turn until 45 degrees from a 0 turning speed.	
 	//public static int nAutonomousMode = 0;
+	
+	
 	
 }

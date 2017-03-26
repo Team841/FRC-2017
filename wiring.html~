@@ -29,7 +29,11 @@
 	                                               <tr><td>0</td><td>HighShooter WheelSpeedSensor</td><td></td></tr>
             	                                         <tr><td>1</td><td>DriveTrain AutonomousSwitch1</td><td></td></tr>
             	                                         <tr><td>2</td><td>DriveTrain AutonomousSwitch2</td><td></td></tr>
-            	                                                                                                                 <tr><td>9</td><td>GearManipulator PegSensor</td><td></td></tr>
+            	                                         <tr><td>3</td><td>DriveTrain leftQuad</td><td></td></tr>
+            	                                         <tr><td>4</td><td>DriveTrain leftQuad</td><td></td></tr>
+            	                                         <tr><td>5</td><td>DriveTrain rightQuad</td><td></td></tr>
+            	                                         <tr><td>6</td><td>DriveTrain rightQuad</td><td></td></tr>
+            	                                                                 <tr><td>9</td><td>GearManipulator PegSensor</td><td></td></tr>
             	                                                                                                                                                                                                     	    </table>
                     <h2>PWMs</h2>
 	    <table><tr>
@@ -37,15 +41,24 @@
 	        <th>Motor</th>
                 <th>Type</th></tr>
 	                                               <tr><td>0</td><td>DriveTrain LeftDriveTrain1</td><td>VictorSP</td></tr>
-            	                                         <tr><td>1</td><td>DriveTrain LeftDriveTrain2</td><td>VictorSP</td></tr>
-            	                                         <tr><td>2</td><td>DriveTrain RightDriveTrain1</td><td>VictorSP</td></tr>
+            	                                                     <tr><td>2</td><td>DriveTrain RightDriveTrain1</td><td>VictorSP</td></tr>
             	                                         <tr><td>3</td><td>DriveTrain RightDriveTrain2</td><td>VictorSP</td></tr>
             	                                         <tr><td>4</td><td>DriveTrain RightLight</td><td>VictorSP</td></tr>
-            	                                                                 <tr><td>7</td><td>DriveTrain LeftLight</td><td>VictorSP</td></tr>
+            	                                         <tr><td>5</td><td>DriveTrain LeftDriveTrain2</td><td>VictorSP</td></tr>
+            	                                                     <tr><td>7</td><td>DriveTrain LeftLight</td><td>VictorSP</td></tr>
             	                                                                 <tr><td>10</td><td>HighShooter HighShooter</td><td>VictorSP</td></tr>
             	                                                                                                                                                                                         	    </table>
      
-        
+                <h2>CAN IDs</h2>
+	<table><tr>
+	<th class="pound">ID</th>
+	<th>Device</th></tr>
+	                                                     <tr><td>1</td><td>DriveTrain Right1</td><td></td></tr>
+            	                                         <tr><td>2</td><td>DriveTrain Right2</td><td></td></tr>
+            	                                         <tr><td>3</td><td>DriveTrain Left3</td><td></td></tr>
+            	                                         <tr><td>4</td><td>DriveTrain Left4</td><td></td></tr>
+            	                                                                                                                                                                                                                                                                 	</table>
+    
             
             
                     <h2>PCM 0</h2>
