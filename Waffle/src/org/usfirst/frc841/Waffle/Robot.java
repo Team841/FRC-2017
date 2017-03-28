@@ -98,10 +98,10 @@ public class Robot extends IterativeRobot {
         // schedule the autonomous command (example)
         //autoMode = (int) autoChooser.getSelected();
 
-    	// DEACTIVATED: Uncomment this block after testing the autonomous modes
-        
+    	//AUTONOMOUS SELECTOR (Switch operated selector)
+    	// Uncomment this block after testing the autonomous modes
+    	/*
     	if ((Robot.driveTrain.getSW1() == false) & (Robot.driveTrain.getSW2()  == false)){
-        	//autonomousCommand = new AutonomousGoHome();
         	autonomousCommand = new AutonomousCommand();
         } else if ((Robot.driveTrain.getSW1() == false) & (Robot.driveTrain.getSW2()  == true))
         {
@@ -113,8 +113,9 @@ public class Robot extends IterativeRobot {
         {
         	autonomousCommand = new AutonomousGearStraight();
         }
+        */
         
-    	
+    	//AUTONOMOUS TESTING 
     	autonomousCommand = new AutonomousGearStraight();
         
         if (autonomousCommand != null)
