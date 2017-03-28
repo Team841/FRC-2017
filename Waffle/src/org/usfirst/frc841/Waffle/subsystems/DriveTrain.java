@@ -11,7 +11,7 @@
 
 package org.usfirst.frc841.Waffle.subsystems;
 
-import org.usfirst.frc841.Waffle.Constants;
+import org.usfirst.frc841.Waffle.C;
 import org.usfirst.frc841.Waffle.RobotMap;
 import org.usfirst.frc841.Waffle.commands.*;
 import org.usfirst.frc841.lib.PID.PIDControlLoop;
@@ -235,12 +235,12 @@ public class DriveTrain extends Subsystem {
 		// Note quickturn and shift is taken care of with buttons in OI.
 
 		double wheelNonLinearity;
-		double wheel = handleDeadband(getWheel(stick), Constants.wheelDeadband); // double
+		double wheel = handleDeadband(getWheel(stick), C.wheelDeadband); // double
 																		// wheel
 																		// =
 																		// handleDeadband(controlBoard.rightStick.getX(),
 																		// wheelDeadband);
-		double throttle = -handleDeadband(getThrottle(stick), Constants.throttleDeadband);
+		double throttle = -handleDeadband(getThrottle(stick), C.throttleDeadband);
 		double negInertia = wheel - oldWheel;
 		/*
 		 * if(getAverageSpeed()> 2000){ SetHighGear(); } else if
@@ -271,7 +271,7 @@ public class DriveTrain extends Subsystem {
 
 		if (isHighGear) {
 			negInertiaScalar = 5.0;
-			sensitivity = Constants.sensitivityHigh; // sensitivity =
+			sensitivity = C.sensitivityHigh; // sensitivity =
 											// Constants.sensitivityHigh.getDouble();
 		} else {
 			if (wheel * negInertia > 0) {
@@ -283,7 +283,7 @@ public class DriveTrain extends Subsystem {
 					negInertiaScalar = 3.0;
 				}
 			}
-			sensitivity = Constants.sensitivityLow; // sensitivity =
+			sensitivity = C.sensitivityLow; // sensitivity =
 											// Constants.sensitivityLow.getDouble();
 			if (Math.abs(throttle) > 0.1) {
 				// sensitivity = 1.0 - (1.0 - sensitivity) / Math.abs(throttle);
@@ -490,18 +490,18 @@ public class DriveTrain extends Subsystem {
 		if( isElevatorPresent() ){
 			double current =  getPegPosition();
 			// If its centered turn on both lights
-			if( (current < (Constants.centervalue + Constants.tolerance)) &
-					(current > (Constants.centervalue - Constants.tolerance)) ){
+			if( (current < (C.centervalue + C.tolerance)) &
+					(current > (C.centervalue - C.tolerance)) ){
 				leftLight.set(1);
 				rightLight.set(1);
 			}
 			// If its to the right turn on the left indicator and turn off the right indicator
-			else if (current > (Constants.centervalue + Constants.tolerance)){
+			else if (current > (C.centervalue + C.tolerance)){
 				leftLight.set(1);
 				rightLight.set(0);
 			}
 			// If its to the left turn on the right indicator and turn off the left indicator
-			else if (current < (Constants.centervalue + Constants.tolerance)){
+			else if (current < (C.centervalue + C.tolerance)){
 				leftLight.set(0);
 				rightLight.set(1);
 			}
@@ -559,10 +559,10 @@ public class DriveTrain extends Subsystem {
 		this.initEncoder(); //sets up the encoders. This should always be bet called first to set up quad.
 		table = NetworkTable.getTable("SmartDashboard");
 		cloop = new DriveTrain.CLoop(this, x, y, (long) Math.abs(period * 100));
-		right1.setCurrentLimit(Constants.currentlimit);
-		right2.setCurrentLimit(Constants.currentlimit);
-		left3.setCurrentLimit(Constants.currentlimit);
-		left4.setCurrentLimit(Constants.currentlimit);
+		right1.setCurrentLimit(C.currentlimit);
+		right2.setCurrentLimit(C.currentlimit);
+		left3.setCurrentLimit(C.currentlimit);
+		left4.setCurrentLimit(C.currentlimit);
 		right1.EnableCurrentLimit(true);
 		right2.EnableCurrentLimit(true);
 		left3.EnableCurrentLimit(true);

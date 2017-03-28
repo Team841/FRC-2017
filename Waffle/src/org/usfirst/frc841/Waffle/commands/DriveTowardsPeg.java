@@ -12,7 +12,7 @@
 package org.usfirst.frc841.Waffle.commands;
 import edu.wpi.first.wpilibj.command.Command;
 
-import org.usfirst.frc841.Waffle.Constants;
+import org.usfirst.frc841.Waffle.C;
 import org.usfirst.frc841.Waffle.Robot;
 
 /**
@@ -47,15 +47,15 @@ public class DriveTowardsPeg extends Command {
     	double centerPoint = Robot.driveTrain.getPegPosition();
     	if (Robot.driveTrain.isElevatorPresent()){
     		//GO STRAIGHT
-    		if (centerPoint < (Constants.centervalue + Constants.tolerance) & centerPoint > (Constants.centervalue - Constants.tolerance)){
+    		if (centerPoint < (C.centervalue + C.tolerance) & centerPoint > (C.centervalue - C.tolerance)){
     			Robot.driveTrain.SetLeftRight(0.3, -0.3);	
     		}
     		//TURN RIGHT
-    		else if(centerPoint < (Constants.centervalue - Constants.tolerance)){
+    		else if(centerPoint < (C.centervalue - C.tolerance)){
     			Robot.driveTrain.SetLeftRight(0, -0.4);
     		}
     		//TURN LEFT
-    		else if(centerPoint > (Constants.centervalue + Constants.tolerance)){
+    		else if(centerPoint > (C.centervalue + C.tolerance)){
     			Robot.driveTrain.SetLeftRight(0.4, 0);
     		}
     	}

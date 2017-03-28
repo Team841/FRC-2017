@@ -13,7 +13,7 @@ package org.usfirst.frc841.Waffle.commands;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 
-import org.usfirst.frc841.Waffle.Constants;
+import org.usfirst.frc841.Waffle.C;
 import org.usfirst.frc841.Waffle.subsystems.*;
 
 /**
@@ -32,7 +32,7 @@ public class AutonomousGearLeft extends CommandGroup {
 		addSequential (new TimedDriveStraight(0.5, 0.3, true));
 		
     	//Turn to the left
-    	addSequential (new TimedTurn(true,0.5,Constants.autoTurningDistance));
+    	addSequential (new TimedTurn(true,0.5,C.autoTurningDistance));
     	//skiped, must be placed in 45 degrees to the left.
 
 		//Go straight

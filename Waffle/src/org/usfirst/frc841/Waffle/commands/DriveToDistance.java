@@ -94,6 +94,7 @@ public class DriveToDistance extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
+    	// TODO: Must be finished calculating the speed and the moment where to stop (as fast as it goes, it will need more time and distance to stop)
         return (Math.abs(Robot.driveTrain.getrightQuadDistance()) > this.m_Feet)|| isTimedOut();
     }
 
