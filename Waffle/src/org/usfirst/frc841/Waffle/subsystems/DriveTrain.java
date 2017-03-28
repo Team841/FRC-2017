@@ -75,7 +75,7 @@ public class DriveTrain extends Subsystem {
 	private double MaxPeriod = 0.1;
 	private double MinRate = 10;
 	private int AverageSamples = 7;
-	private double wheelDiameter = 6;
+	private double wheelDiameter = 3;
 	private double DistancePerPulse = 1;
 
 	
@@ -126,52 +126,6 @@ public class DriveTrain extends Subsystem {
 		leftQuad.reset();
 		rightQuad.reset();
 	}
-
-	/**
-	 * This method takes in the left and right speeds and averages out to give a
-	 * total forward moving speed.
-	 * 
-	 * @return average speed of robot
-	 */
-	public double getAverageSpeed1() {
-		double left = 0;
-		double right = 0;
-		double average = 0;
-		left = leftQuad.getRate();
-		right = rightQuad.getRate();
-
-		average = Math.abs((right + left) / 2);
-		return average;
-
-	/*
-	 * This method returns the distance in feet from the left quadrature
-	 * measurement.
-	 * 
-	 * @return leftside Distance in feet
-	 */
-		}
-	/*
-	 * This method returns the distance in feet from the right quadrature
-	 * measurement.
-	 * 
-	 * @return rightside Distance in feet
-	 */
-	
-	/*
-	public double getrightQuadDistance() {
-		return rightQuad.get() / 255.00 * wheelDiameter * Math.PI / 12;
-	}
-
-	/*
-	 * This method resets the encoders
-	 */
-	
-	/*
-	public void resetEncoders() {
-		// Reset Quad;
-		leftQuad.reset();
-		rightQuad.reset();
-	*/
 
 	/**
 	 * This method takes in the left and right speeds and averages out to give a
