@@ -29,20 +29,20 @@ public class AutonomousGearLeft extends CommandGroup {
 		addSequential (new HighGear());
     	
 		//Drive straight
-		addSequential (new TimedDriveStraight(0.5, 0.3, true));
+		addSequential (new TimedDriveStraight(C.autoDrivingDistance, C.autoMotorLowSpeed, true));
 		
     	//Turn to the left
     	addSequential (new TimedTurn(true,0.5,C.autoTurningDistance));
     	//skiped, must be placed in 45 degrees to the left.
 
 		//Go straight
-		addSequential (new TimedDriveStraight(0.5, 0.3, true));
+		addSequential (new TimedDriveStraight(C.autoDrivingDistance, 0.3, true));
 
     	//Turn to the right
     	addSequential (new TimedTurn(false,0.5,0.7));
 
 		//Go straight
-		addSequential (new TimedDriveStraight(0.5, 0.3, true));
+		addSequential (new TimedDriveStraight(C.autoDrivingDistance, 0.3, true));
 
     	//Turn to the right
     	addSequential (new TimedTurn(false,0.5,0.7));
@@ -54,12 +54,12 @@ public class AutonomousGearLeft extends CommandGroup {
 		addSequential (new GearRelease());
 		
 		//Go back 
-    	addSequential (new TimedDriveStraight(0.7, 0.5, false));
+    	addSequential (new TimedDriveStraight(0.7, C.autoDrivingDistance, false));
     	
     	//Turn to the left
-    	addSequential (new TimedTurn(true,0.5,.4));
+    	addSequential (new TimedTurn(true,0.5, C.autoTurningDistance));
     	
     	//Drive over line
-    	addSequential (new TimedDriveStraight(1.5, 0.5, true));
+    	addSequential (new TimedDriveStraight(C.autoDrivingDistance * 3, C.autoMotorSpeed, true));
     } 
 }

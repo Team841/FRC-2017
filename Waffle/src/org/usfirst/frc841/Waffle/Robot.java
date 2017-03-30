@@ -100,7 +100,6 @@ public class Robot extends IterativeRobot {
 
     	//AUTONOMOUS SELECTOR (Switch operated selector)
     	// Uncomment this block after testing the autonomous modes
-    	/*
     	if ((Robot.driveTrain.getSW1() == false) & (Robot.driveTrain.getSW2()  == false)){
         	autonomousCommand = new AutonomousCommand();
         } else if ((Robot.driveTrain.getSW1() == false) & (Robot.driveTrain.getSW2()  == true))
@@ -113,10 +112,9 @@ public class Robot extends IterativeRobot {
         {
         	autonomousCommand = new AutonomousGearStraight();
         }
-        */
         
     	//AUTONOMOUS TESTING 
-    	autonomousCommand = new AutonomousGearStraight();
+    	//autonomousCommand = new AutonomousGearStraight();
         
         if (autonomousCommand != null)
         
