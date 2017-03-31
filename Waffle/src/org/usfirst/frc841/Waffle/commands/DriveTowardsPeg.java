@@ -39,7 +39,7 @@ public class DriveTowardsPeg extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	setTimeout(3);
+    	//setTimeout(3);
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -67,7 +67,7 @@ public class DriveTowardsPeg extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return Robot.gearManipulator.isPegPresent() || isTimedOut();
+        return Robot.gearManipulator.isPegPresent(); //|| isTimedOut();
     }
 
     // Called once after isFinished returns true

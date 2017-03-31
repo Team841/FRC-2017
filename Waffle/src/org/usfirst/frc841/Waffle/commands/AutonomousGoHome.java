@@ -32,7 +32,7 @@ public class AutonomousGoHome extends CommandGroup {
 		addSequential (new HighGear());
     	
 		//Drive straight
-		addSequential (new TimedDriveStraight(3, 1, true));
+		addSequential (new TimedDriveStraight(3.5, 1, true));
 		
 
     	
