@@ -38,30 +38,29 @@ public class AutonomousGearRight extends CommandGroup {
     	//skiped, must be placed in 45 degrees to the left.
     	
 		//Go straight
-		//addSequential (new TimedDriveStraight(C.autoDrivingDistance, 0.3, true));
-    	addSequential (new TimedDriveStraight(C.autoDrivingDistance*3.5, C.autoMotorSpeed, true));
+		addSequential (new TimedDriveStraight(C.autoDrivingDistance*2, 0.3, true));
+//    	addSequential (new TimedDriveStraight(C.autoDrivingDistance*3.5, C.autoMotorSpeed, true));
     	
     	//Turn to the left
-    	//addSequential (new TimedTurn(true,0.5,0.7));
+    	addSequential (new TimedTurn(true,0.5,0.35));
 
 		//Go straight
-		//addSequential (new TimedDriveStraight(C.autoDrivingDistance, 0.3, true));
+		addSequential (new TimedDriveStraight(C.autoDrivingDistance, 0.3, true));
 
     	//Turn to the left
-    	//addSequential (new TimedTurn(true,0.5,0.7));
+    	addSequential (new TimedTurn(true,0.45,0.7));
     	
 		//Center and go straight to the Peg
-		//addSequential (new DriveTowardsPeg());
+		addSequential (new DriveTowardsPeg());
 		
 		//ReleaseGear
 		//addSequential (new SpitGear());
 		
-		//Delay of 10 seconds
-		addSequential (new TimedDriveStraight(10, 0, true));
-
+		//Delay of 3 seconds
+		addSequential (new TimedDriveStraight(3, 0, true));
 		
 		//Go back 
-    	//addSequential (new TimedDriveStraight(0.7, C.autoDrivingDistance, false));
+    	addSequential (new TimedDriveStraight(0.7, C.autoDrivingDistance, false));
     	
     	//Turn to the right
     	addSequential (new TimedTurn(false,0.5,C.autoTurningDistance));

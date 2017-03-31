@@ -128,7 +128,7 @@ public class GearManipulator extends Subsystem {
 			elbow.set(0);
 		}
 		else{
-			elbow.set(-.09);
+			elbow.set(-.02);
 		}
 	}
 	/**
