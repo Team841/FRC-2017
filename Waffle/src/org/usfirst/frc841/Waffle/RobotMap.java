@@ -79,7 +79,7 @@ public class RobotMap {
         driveTrainClimberSolenoid = new Solenoid(0, 5);
         LiveWindow.addActuator("DriveTrain", "ClimberSolenoid", driveTrainClimberSolenoid);
         
-        driveTrainLeftLight = new VictorSP(7);
+        driveTrainLeftLight = new VictorSP(6);
         LiveWindow.addActuator("DriveTrain", "LeftLight", (VictorSP) driveTrainLeftLight);
         
         driveTrainRightLight = new VictorSP(4);

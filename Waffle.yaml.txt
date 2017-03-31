@@ -106,7 +106,7 @@ Children:
           default: '0'
           name: Output Channel (PWM)
           validators: &id005 [PWMOutput]
-          value: '7'
+          value: '6'
       Base: Speed Controller
       Name: LeftLight
     - Children: []

@@ -106,7 +106,7 @@ public class GearManipulator extends Subsystem {
 	 * Turns on the elbow motor to lower the intake
 	 */
 	public void setElbowDown(){
-		elbow.set(-0.25);
+		elbow.set(-.75);
 	}
 	/**
 	 * Turns off the elbow motor
