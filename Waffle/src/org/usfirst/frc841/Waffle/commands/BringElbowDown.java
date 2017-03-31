@@ -12,6 +12,7 @@
 package org.usfirst.frc841.Waffle.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc841.Waffle.Robot;
+import org.usfirst.frc841.Waffle.subsystems.GearManipulator;
 
 /**
  *
@@ -47,7 +48,17 @@ public class BringElbowDown extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return (isTimedOut() || Robot.gearManipulator.getLowerLimit());
+        //return (isTimedOut() || Robot.gearManipulator.getLowerLimit());
+    	if (isTimedOut() || Robot.gearManipulator.getLowerLimit())
+    	{
+    		// Delay or something
+    		
+    		Robot.gearManipulator.setElbowQuickUp();
+    		//setTimeout(0.25);
+    		//Robot.gearManipulator.setElbowStop();
+    		return true;
+    	}
+    	else return false;
     }
 
     // Called once after isFinished returns true

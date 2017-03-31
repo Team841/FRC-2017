@@ -45,6 +45,7 @@ public class GearManipulator extends Subsystem {
     private boolean last = false;
     private boolean current = false;
     private boolean autopickup = false;
+    private boolean elstate = false; // false is down
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
@@ -101,18 +102,34 @@ public class GearManipulator extends Subsystem {
 	 */
 	public void setElbowUp (){
 		elbow.set(0.5);
+		this.elstate = true;
 	}
 	/**
 	 * Turns on the elbow motor to lower the intake
 	 */
 	public void setElbowDown(){
-		elbow.set(-.75);
+		//elbow.set(-.75);
+		elbow.set(-.50);
+		this.elstate = false;
 	}
+	
+	/**
+	 * Move the Bow just a little up
+	 */
+	public void setElbowQuickUp(){
+		elbow.set(0.25);
+	}
+	
 	/**
 	 * Turns off the elbow motor
 	 */
 	public void setElbowStop(){
-		elbow.set(0);
+		if(this.elstate){
+			elbow.set(0);
+		}
+		else{
+			elbow.set(-.09);
+		}
 	}
 	/**
 	 * @return the state of the up limit for the elbow to move
