@@ -52,8 +52,8 @@ public class AutonomousGearLeft extends CommandGroup {
 		addSequential (new DriveTowardsPeg());
 		//CAMERA OPERATED AUTONOMOUS: END
 		
-		//Delay of 3 seconds
-		addSequential (new TimedDriveStraight(3, 0, true));
+		//Delay of 5 seconds
+		addSequential (new TimedDriveStraight(5, 0, true));
 		
 		//GO BACK AND GO TO THE GOAL: BEGIN		
 		//Go back 

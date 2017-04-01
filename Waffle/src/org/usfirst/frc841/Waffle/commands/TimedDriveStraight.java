@@ -51,11 +51,11 @@ public class TimedDriveStraight extends Command {
     protected void execute() {
     	if (m_Forward){
     		//drive at power forward
-    		Robot.driveTrain.SetLeftRight(m_Power, -m_Power);
+    		Robot.driveTrain.SetLeftRight(m_Power, -m_Power * 0.95);
     	}
     	else{
     		//drive at power reverse
-    		Robot.driveTrain.SetLeftRight(-m_Power, m_Power);
+    		Robot.driveTrain.SetLeftRight(-m_Power, m_Power*0.95);
     	}
     }
 
