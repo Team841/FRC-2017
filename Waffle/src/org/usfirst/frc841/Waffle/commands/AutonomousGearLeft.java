@@ -36,31 +36,26 @@ public class AutonomousGearLeft extends CommandGroup {
     	//skiped, must be placed in 45 degrees to the left.
 
 		//Go straight
-		addSequential (new TimedDriveStraight(C.autoDrivingDistance*2, 0.3, true));
-//		addSequential (new TimedDriveStraight(C.autoDrivingDistance*3.5, C.autoMotorSpeed, true));
-
+		addSequential (new TimedDriveStraight(C.autoDrivingDistance*2, C.autoMotorLowSpeed, true));
 		
     	//Turn to the right
     	addSequential (new TimedTurn(false,0.5,0.35));
 
 		//Go straight
-		addSequential (new TimedDriveStraight(C.autoDrivingDistance, 0.3, true));
+		addSequential (new TimedDriveStraight(C.autoDrivingDistance, C.autoMotorLowSpeed, true));
 
     	//Turn to the right
     	addSequential (new TimedTurn(false,0.45,0.7));
-    	
+
+		//CAMERA OPERATED AUTONOMOUS: BEGIN    	
 		//Center and go straight to the Peg
 		addSequential (new DriveTowardsPeg());
-
-		//Center and go straight to the Pig
-		addSequential (new DriveTowardsPeg());
+		//CAMERA OPERATED AUTONOMOUS: END
 		
-		//ReleaseGear
-		//addSequential (new SpitGear());
-		
-		//Delay of 10 seconds
+		//Delay of 3 seconds
 		addSequential (new TimedDriveStraight(3, 0, true));
 		
+		//GO BACK AND GO TO THE GOAL: BEGIN		
 		//Go back 
     	addSequential (new TimedDriveStraight(0.7, C.autoDrivingDistance, false));
     	
@@ -69,5 +64,7 @@ public class AutonomousGearLeft extends CommandGroup {
     	
     	//Drive over line
     	addSequential (new TimedDriveStraight(C.autoDrivingDistance * 3, C.autoMotorSpeed, true));
-    } 
+		//GO BACK AND GO TO THE GOAL: END
+
+	} 
 }
