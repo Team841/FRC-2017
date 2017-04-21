@@ -61,7 +61,7 @@ public class DriveTowardsPeg extends Command {
     	}
     	else {
     		//STOP THE ROBOT
-    		Robot.driveTrain.SetLeftRight(0, 0);
+    		Robot.driveTrain.SetLeftRight(0.3, -.3*0.95);
     	}
     }
 
